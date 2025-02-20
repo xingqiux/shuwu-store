@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://xkqq.top:3306/shuwu-shot
+      username: "shuwu-shot"
+      password: "012151"
+      driver-class-name: com.mysql.cj.jdbc.Driver
