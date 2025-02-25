@@ -27,9 +27,11 @@ public class Main implements WebMvcConfigurer {
                 .addPathPatterns("/**")    //拦截所有路径
                 .excludePathPatterns("/user/login",
                                      "/user/register",
-                                     "/swagger-ui.html",
+                                     "/swagger-ui.html",    //文档放行
                                      "/swagger-ui/**",
-                                     "/v3/api-docs/**");
+                                     "/v3/api-docs/**",
+                                     "/products/**"        //首页获取商品相关信息放行
+                        );
     }
     @Bean
     //配置MyBatis Plus 插件

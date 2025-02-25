@@ -2,6 +2,7 @@ package top.xkqq.pojo;
 
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -18,5 +19,7 @@ public class Product {
   private Integer categoryId;
   private Integer status;
   private String description;
+  @TableField("img_url")
+  private String imgUrl;
 
 }

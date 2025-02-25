@@ -2,12 +2,10 @@ package top.xkqq.interceptor;
 
 
 import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
 import top.xkqq.util.JWTUtil;
 
 @Component
@@ -23,7 +21,7 @@ public class JwtInterceptor implements HandlerInterceptor {
         //从请求头获取 Token
 
         String token = request.getHeader("token");
-        System.out.println(token);
+//        System.out.println(token);
 
         // toke 为 空
         if (token == null){

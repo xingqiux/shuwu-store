@@ -18,7 +18,7 @@ public class JWTUtil {
     /**
      * 过期时间，单位(秒)
      */
-    public static final int ACCESS_EXPIRE=300;
+    public static final int ACCESS_EXPIRE=2592000;
 
     /**
      * 加密算法

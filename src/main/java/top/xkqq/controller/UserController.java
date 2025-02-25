@@ -1,6 +1,6 @@
 package top.xkqq.controller;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import top.xkqq.pojo.User;
@@ -36,8 +36,6 @@ public class UserController {
     //用户注册
     @PostMapping("register")
     public Result<Object> userRegister(@RequestBody User user){
-
-
         //查询用户名称是否已存在
         if(userService.lambdaQuery().eq(User::getUsername, user.getUsername()).exists() ||
            userService.lambdaQuery().eq(User::getUsername,user.getEmail()).exists()){
